@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgotpassword/forgotpassword.component';
 
 const appRoutes: Routes = [
   {
@@ -18,9 +19,11 @@ const appRoutes: Routes = [
       { path: 'about', component: AboutComponent },
     ]
   },
+  { path: 'register', component: RegisterComponent },
+  { path: 'forgotpassword', component: ForgotPasswordComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'register', component: RegisterComponent }
+
 ];
 
 @NgModule({
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
